@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">App-1SantiSG</string>
+    <string name="user">SanchezUser</string>
+    <string name="btn1">Registro</string>
+    <string name="btn2">Login</string>
 </resources>
