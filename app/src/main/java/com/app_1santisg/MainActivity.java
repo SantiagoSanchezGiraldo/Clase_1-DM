@@ -3,6 +3,10 @@ package com.app_1santisg;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     long num1 = 1234567;
     short no = 10;
     double pi = 3.14;
+
+    String Tag ="test";
     TextView NombreUser;
     Button btn1, btn2;
 
@@ -30,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
         btn1.setOnClickListener(new View.setOnClickListener(){
             @Override
             public void onClick(View view){
-
                 NombreUser.setText("Se ha registrado");
             }
         });
@@ -38,9 +43,32 @@ public class MainActivity extends AppCompatActivity {
         btn2.setOnClickListener(new View.setOnClickListener(){
             @Override
             public void onClick(View view){
-
                 NombreUser.setText("Se ha Logeado");
             }
         });
+
+        @Override
+        protected void onStart(){
+            super.onStart();
+            Log.i(Tag, "Estoy en OnStart");
+        }
+
+        @Override
+        protected void onPause(){
+            super.onPause();
+            Log.i(Tag, "Estoy en onPause");
+        }
+
+        @Override
+        protected void onRestart(){
+            super.onRestart();
+            Log.i(Tag, "Estoy en onRestart");
+        }
+
+        @Override
+        protected void onDestroy(){
+            super.onDestroy();
+            Log.i(Tag, "Estoy en onDestroy");
+        }
     }
 }
