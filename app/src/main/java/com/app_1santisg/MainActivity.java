@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         btn1.setOnClickListener(new View.setOnClickListener(){
             @Override
             public void onClick(View view){
+
                 NombreUser.setText("Se ha registrado");
             }
         });
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         btn2.setOnClickListener(new View.setOnClickListener(){
             @Override
             public void onClick(View view){
+
                 NombreUser.setText("Se ha Logeado");
             }
         });
